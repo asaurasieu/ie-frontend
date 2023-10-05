@@ -113,7 +113,7 @@
             </b-form-input>
           </b-form-group>
           <b-form-group
-            id="form-currency-group"
+            id="form-country-group"
             label="Country:"
             label-for="form-country-input"
           >
@@ -121,7 +121,7 @@
               id="form-country-input"
               type="text"
               v-model="createAccountForm.country"
-              placeholder="$ or €"
+              placeholder=" "
               required
             >
             </b-form-input>
