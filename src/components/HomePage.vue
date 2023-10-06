@@ -3,7 +3,6 @@
   <div class="home">
     <h1 class="title"> Welcome to the IE Bank Server </h1>
     <h2 class="subtitle"> Please Select </h2>
-    <h3 class="subtitle"> Ana Sauras </h3>
     <div class="button-container">
       <router-link to="/skull" class="button">Skull</router-link>
       <router-link to="/accounts" class="button">Accounts</router-link>
