@@ -121,7 +121,7 @@
               id="form-country-input"
               type="text"
               v-model="createAccountForm.country"
-              placeholder=" "
+              placeholder="Enter Country Name"
               required
             >
             </b-form-input>
@@ -177,6 +177,7 @@ export default {
       editAccountForm: {
         id: "",
         name: "",
+        country: "",
         
       },
       showMessage: false,
@@ -275,6 +276,7 @@ export default {
     initForm() {
       this.createAccountForm.name = "";
       this.createAccountForm.currency = "";
+      this.createAccountForm.country = "";
       this.editAccountForm.id = "";
       this.editAccountForm.name = "";
       this.editAccountForm.country = "";
@@ -299,6 +301,7 @@ export default {
       this.$refs.editAccountModal.hide(); //hide the modal when submitted
       const payload = {
         name: this.editAccountForm.name,
+        country: this.editAccountForm.country,
       };
       this.RESTupdateAccount(payload, this.editAccountForm.id);
       this.initForm();
