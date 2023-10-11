@@ -26,8 +26,8 @@
                 <th scope="col">Account Name</th>
                 <th scope="col">Account Number</th>
                 <th scope="col">Account Balance</th>
-                <th scope="col">Country</th>
                 <th scope="col">Account Currency</th>
+                <th scope="col">Account Country</th>
                 <th scope="col">Account Status</th>
                 <th scope="col">Actions</th>
               </tr>
@@ -35,10 +35,10 @@
             <tbody>
               <tr v-for="account in accounts" :key="account.id">
                 <td>{{ account.name }}</td>
-                <td>{{ account.country }}</td>
                 <td>{{ account.account_number }}</td>
                 <td>{{ account.balance }}</td>
                 <td>{{ account.currency }}</td>
+                <td>{{ account.country }}</td>
                 <td>
                   <span
                     v-if="account.status == 'Active'"
@@ -121,7 +121,7 @@
               id="form-country-input"
               type="text"
               v-model="createAccountForm.country"
-              placeholder="Enter Country Name"
+              placeholder="Account Country"
               required
             >
             </b-form-input>
@@ -177,8 +177,6 @@ export default {
       editAccountForm: {
         id: "",
         name: "",
-        country: "",
-        
       },
       showMessage: false,
       message: "",
@@ -279,7 +277,6 @@ export default {
       this.createAccountForm.country = "";
       this.editAccountForm.id = "";
       this.editAccountForm.name = "";
-      this.editAccountForm.country = "";
     },
 
     // Handle submit event for create account
@@ -301,7 +298,6 @@ export default {
       this.$refs.editAccountModal.hide(); //hide the modal when submitted
       const payload = {
         name: this.editAccountForm.name,
-        country: this.editAccountForm.country,
       };
       this.RESTupdateAccount(payload, this.editAccountForm.id);
       this.initForm();
