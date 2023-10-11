@@ -6,7 +6,7 @@
           <h1>Accounts</h1>
           <hr />
           <br />
-          <!-- Allert Message -->
+          <!-- Alert Message -->
           <b-alert v-if="showMessage" variant="success" show>{{
             message
           }}</b-alert>
@@ -208,7 +208,7 @@ export default {
         .then((response) => {
           this.RESTgetAccounts();
           // For message alert
-          this.message = "Account Created succesfully!";
+          this.message = "Account Created successfully!";
           // To actually show the message
           this.showMessage = true;
           // To hide the message after 3 seconds
@@ -230,7 +230,7 @@ export default {
         .then((response) => {
           this.RESTgetAccounts();
           // For message alert
-          this.message = "Account Updated succesfully!";
+          this.message = "Account Updated successfully!";
           // To actually show the message
           this.showMessage = true;
           // To hide the message after 3 seconds
@@ -252,7 +252,7 @@ export default {
         .then((response) => {
           this.RESTgetAccounts();
           // For message alert
-          this.message = "Account Deleted succesfully!";
+          this.message = "Account Deleted successfully!";
           // To actually show the message
           this.showMessage = true;
           // To hide the message after 3 seconds
