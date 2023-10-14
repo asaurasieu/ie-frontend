@@ -2,6 +2,7 @@
 <template>
   <div class="home">
     <h1 class="title"> Welcome to the IE Bank Server </h1>
+    <p class="description"> We are the bank of the future, we are here for you !! </p>
     <h2 class="subtitle"> Please Select </h2>
     <div class="button-container">
       <router-link to="/skull" class="button">Skull</router-link>
@@ -40,6 +41,17 @@ html, body{
   margin-bottom: 2rem;
   font-family: 'Georgia', sans-serif;  
   background-color:  grey; 
+  border-radius: 10px; 
+  padding: 0.5rem 1rem; 
+  animation: bounce 1s infinite;
+}
+
+.description {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', sans-serif; 
+  background-color: grey; 
   border-radius: 10px; 
   padding: 0.5rem 1rem; 
   animation: bounce 1s infinite;
